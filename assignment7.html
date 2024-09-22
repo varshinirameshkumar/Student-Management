@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management</title>
+  <style>
+    body {
+      margin: auto;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: x-large;
+      background-color: antiquewhite;
+      text-align: center;
+    }
+    button {
+      background-color: burlywood;
+      border-radius: 5px;
+      border-color: black;
+      cursor: pointer;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+    }
+    input {
+      background-color: rgb(205, 184, 170);
+      font-size: medium;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: left;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    li {
+      background-color: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    }
+    li:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Management</h1>
+  
+  <button onclick="showForm()">Add Student</button>
+  <ul id="studentList"></ul>
+  <div id="formContainer" style="display: none;">
+    <form class="sty" id="studentForm" onsubmit="addStudent(event)">
+      <br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" title="name" placeholder="Enter student name" required>
+      <br><br>
+      <label for="age">Age:</label>
+      <input type="text" id="age" title="age" placeholder="Enter student age" required>
+      <br><br>
+      <label for="grade">Grade:</label>
+      <input type="text" id="grade" title="grade" placeholder="Enter student grade" required>
+      <br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="script1.js"></script>
+</body>
+</html>
